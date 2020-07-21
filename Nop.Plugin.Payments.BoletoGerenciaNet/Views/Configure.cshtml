@@ -1,0 +1,59 @@
+﻿@model Nop.Plugin.Payments.Boleto.Models.ConfigurationModel
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+@await Component.InvokeAsync("StoreScopeConfiguration")
+
+<form asp-controller="PaymentBoleto" asp-action="Configure" method="post">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>@T("Plugins.Payments.Boleto.Instructions")</p>
+                <div class="form-group">
+                    <div class="col-md-3">
+                       <label>Ambiente de Teste</label>
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="UseSandbox" />
+                        <span asp-validation-for="UseSandbox"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <label>ClienteID</label>
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ClienteID" />
+                        <span asp-validation-for="ClienteID"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <label>ClientSecret</label>
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ClientSecret" />
+                        <span asp-validation-for="ClientSecret"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <label>UrlNotification</label>
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="UrlNotification" />
+                        <span asp-validation-for="UrlNotification"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn bg-primary" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

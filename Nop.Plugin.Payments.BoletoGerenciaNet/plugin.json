@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Payment methods",
+  "FriendlyName": "Boleto",
+  "SystemName": "Payments.Boleto",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.20" ],
+  "Author": "Jeferson Araújo Oliveira - EasyFashion",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Payments.Boleto.dll",
+  "Description": "Boleto"
+}

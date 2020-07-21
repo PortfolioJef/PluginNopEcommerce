@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Cartão de Crédito Cielo",
+  "FriendlyName": "Cielo",
+  "SystemName": "Payments.Cielo",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.20" ],
+  "Author": "Jeferson Araújo Oliveira - EasyFashion",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Payments.Cielo.dll",
+  "Description": "This plugin allows paying with Cielo in Brazil"
+}

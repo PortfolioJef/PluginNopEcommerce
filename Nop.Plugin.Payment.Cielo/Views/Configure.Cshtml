@@ -1,0 +1,75 @@
+﻿@model Nop.Plugin.Payment.Cielo.Models.ConfigurationCieloModel
+@{
+    Layout = "_ConfigurePlugin";
+}
+@inject Nop.Core.IWebHelper webHelper
+
+
+@await Component.InvokeAsync("StoreScopeConfiguration")
+
+<form asp-controller="PaymentCielo" asp-action="Configure" method="post">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>@T("Plugins.Payments.Cielo.Instructions")</p>
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="MerchantID" />
+                    </div>
+                    <div class="col-md-5">
+                        <nop-editor asp-for="MerchantID" />   
+                        <span asp-validation-for="MerchantID"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="MerchantKey" />
+                    </div>
+                    <div class="col-md-5">
+                        <nop-editor asp-for="MerchantKey" />
+                        <span asp-validation-for="MerchantKey"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="idEmpresa" />
+                    </div>
+                    <div class="col-md-5">
+                        <nop-editor asp-for="idEmpresa" />
+                        <span asp-validation-for="idEmpresa"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="idFilial" />
+                    </div>
+                    <div class="col-md-5">
+
+                        <nop-editor asp-for="idFilial" />                        
+                        <span asp-validation-for="idFilial"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="UrlNotification" />
+                    </div>
+                    <div class="col-md-5">
+                        <nop-editor asp-for="UrlNotification" />
+                        <span asp-validation-for="UrlNotification"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn bg-primary" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
